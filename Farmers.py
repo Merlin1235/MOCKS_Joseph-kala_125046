@@ -1,13 +1,16 @@
-print("enter number of cows: ")
-num_cows = int(input())
+#a program to calculate production of milk and display the result
+Number_of_cows = int(input("Enter number of cows: "))
+Milk_production_per_cow = float(input("Enter milk production per cow (in liters): "))
+cost_of_milk_per_liter = float(input("Enter cost of milk per liter: "))
 
-print("enter the average milk production per cow (in liters): ")
-average_milk = float(input())
+#calculating total amount of milk production
+total_amount_of_milk_production_per_day = Number_of_cows * Milk_production_per_cow
 
-print("enter the price of milk per liter(ksh): ")
-milk_price = float(input())
+#calculating total cost of milk production per day
+total_cost_of_milk_production_per_day = Number_of_cows * Milk_production_per_cow * cost_of_milk_per_liter
 
-total_milk_production_per_day = num_cows * average_milk
-total_milk_cost_production_per_day = total_milk_production_per_day * milk_price
-print("Total milk production (in liters):", total_milk_production_per_day)
-print("Total cost of milk production (in ksh):", total_milk_cost_production_per_day)
+#displaying the result
+print("Number of Cows: ", Number_of_cows)
+print("Milk Production per Cow: ", Milk_production_per_cow, " liters")
+print("Total Milk Production per Day: ", total_amount_of_milk_production_per_day, " liters")
+print("Total Cost of Milk Production per Day: ", total_cost_of_milk_production_per_day, " shillings")
