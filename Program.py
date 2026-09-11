@@ -1,28 +1,24 @@
-print("Please enter your employee id:")
-employee_id = input()
+# program to calculate gross salary tax amount net salary and generates a payslip for an employee
+Employee_name = input("Enter employee name: ")
+Employee_id = input("Enter employee ID: ")
+basic_salary = float(input("Enter basic salary: "))
+allowances = float(input("Enter allowances: "))
+deductions = float(input("Enter deductions: "))
+Tax_rate = float(input("Enter tax rate: "))
 
-print("Please enter your employee name:")
-employee_name = input()
+# Calculate tax amount
+Tax_amount = (Tax_rate / 100) * basic_salary
 
-print("Please enter your basic salary:")
-basic_salary = float(input())
+# Calculate net salary
+Net_salary = basic_salary + allowances - deductions - Tax_amount
 
-print("Please enter your allowances:")
-allowances = float(input())
-
-print("Please enter your deductions:")
-deductions = float(input())
-print("basic salary entered:", basic_salary)
-
-print("Please enter your tax rate:")
-tax_rate = float(input())
-print("tax rate entered:", tax_rate)
-
-gross_salary = basic_salary + allowances - deductions
-print("Please enter your gross salary:")
-print("gross salary:", gross_salary)
-
-tax_amount = gross_salary * tax_rate
-net_salary = gross_salary - tax_amount
-print("tax amount:", tax_amount)
-print("net salary:", net_salary)
+# Display the payslip
+print("Payslip for Employee")
+print("=====================")
+print("Employee Name : ", Employee_name)
+print("Employee ID : ", Employee_id)
+print("Gross Salary : ", basic_salary)
+print("Allowances : ", allowances)
+print("Deductions : ", deductions)
+print("Tax_Amount : ", Tax_amount)
+print("Net_Salary : ", Net_salary)
