@@ -1,6 +1,7 @@
 # program to calculate gross salary tax amount net salary and generates a payslip for an employee
-Employee_name = input("Enter employee name: ")
+
 Employee_id = input("Enter employee ID: ")
+Employee_name = input("Enter employee name: ")
 basic_salary = float(input("Enter basic salary: "))
 allowances = float(input("Enter allowances: "))
 deductions = float(input("Enter deductions: "))
@@ -15,8 +16,8 @@ Net_salary = basic_salary + allowances - deductions - Tax_amount
 # Display the payslip
 print("Payslip for Employee")
 print("=====================")
-print("Employee Name : ", Employee_name)
 print("Employee ID : ", Employee_id)
+print("Employee Name : ", Employee_name)
 print("Gross Salary : ", basic_salary)
 print("Allowances : ", allowances)
 print("Deductions : ", deductions)
